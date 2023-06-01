@@ -17,11 +17,11 @@ export interface GitPerson {
   date?: string;
 }
 
-await load({ export: true });
+// await load({ allowEmptyValues: true, export: true, });
 
-const GH_OWNER = globalThis.Deno?.env.get("GH_OWNER") ?? "ts-why";
-const GH_REPO = globalThis.Deno?.env.get("GH_REPO") ?? "tswhy";
-const GH_TOKEN = globalThis.Deno?.env.get("GH_TOKEN") ?? "";
+const GH_OWNER =  "ts-why";
+const GH_REPO =  "tswhy";
+const GH_TOKEN =  "";
 
 const PluggedOctokit = Octokit.plugin(createPullRequest);
 
