@@ -3,15 +3,15 @@
   "codeText": "TS1024",
   "title": "'readonly' modifier can only appear on a property declaration or index signature.",
   "category": "error",
-  "documentation": "It is not possible to mark all properties as `readonly` by marking the container\nas `readonly`:\n\n```ts\nreadonly class A {\n  static x = 1;\n}\nreadonly const a = { a: 1 };\n```\n\n## See also\n\n- [TypeScript 3.4 release announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4/)\n- [`as const` proposal](https://github.com/Microsoft/TypeScript/issues/26979)\n",
+  "documentation": "It is not possible to mark all properties as `readonly` by marking the container\r\nas `readonly`:\r\n\r\n```ts\r\nreadonly class A {\r\n  static x = 1;\r\n}\r\nreadonly const a = { a: 1 };\r\n```\r\n\r\n## See also\r\n\r\n- [TypeScript 3.4 release announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4/)\r\n- [`as const` proposal](https://github.com/Microsoft/TypeScript/issues/26979)\r\n",
   "fixes": [
     {
       "title": "Remove readonly keyword.",
-      "body": "To fix the error, move the `readonly` declaration into the object for classes:\n\n```ts\nclass A {\n  static readonly x = 1;\n}\n```\n"
+      "body": "To fix the error, move the `readonly` declaration into the object for classes:\r\n\r\n```ts\r\nclass A {\r\n  static readonly x = 1;\r\n}\r\n```\r\n"
     },
     {
       "title": "Use const keyword.",
-      "body": "For objects, you can use const assertions to deeply mark the object as read\nonly.\n\n```ts\nconst a = { a: 1 } as const;\n```\n"
+      "body": "For objects, you can use const assertions to deeply mark the object as read\r\nonly.\r\n\r\n```ts\r\nconst a = { a: 1 } as const;\r\n```\r\n"
     }
   ]
 }

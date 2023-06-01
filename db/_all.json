@@ -4,7 +4,7 @@
     "codeText": "TS1002",
     "title": "Unterminated string literal.",
     "category": "error",
-    "documentation": "Occurs when there is an unterminated string literal somewhere. String literals\nmust be enclosed by single (`'`) or double (`\"`) quotes.\n\nOften, it caused by an attempt to use a string literal over multiple lines:\n\n```ts\nconst str = \"Here is some text\n  that I want to break\n  across multiple lines.\";\n```\n",
+    "documentation": "Occurs when there is an unterminated string literal somewhere. String literals\r\nmust be enclosed by single (`'`) or double (`\"`) quotes.\r\n\r\nOften, it caused by an attempt to use a string literal over multiple lines:\r\n\r\n```ts\r\nconst str = \"Here is some text\r\n  that I want to break\r\n  across multiple lines.\";\r\n```\r\n",
     "tags": [
       "syntax-error",
       "incomplete-code",
@@ -16,7 +16,7 @@
     "fixes": [
       {
         "title": "Multiple Lines",
-        "body": "If you are trying to break a string across multiple lines, you can use template\nliterals using the backtick (`` ` ``) instead:\n\n```ts\nconst str = `Here is some text\n  that I want to break\n  across multiple lines.`;\n```\n\nOr you can use string concatenation:\n\n```ts\nconst str = \"Here is some text\" +\n  \"that I want to break \" +\n  \"across multiple lines.\";\n```\n\nOr you can use a backslash (`\\`) at the end of the line:\n\n```ts\nconst str = \"Here is some text \\\n  that I want to break \\\n  across multiple lines.\";\n```\n"
+        "body": "If you are trying to break a string across multiple lines, you can use template\r\nliterals using the backtick (`` ` ``) instead:\r\n\r\n```ts\r\nconst str = `Here is some text\r\n  that I want to break\r\n  across multiple lines.`;\r\n```\r\n\r\nOr you can use string concatenation:\r\n\r\n```ts\r\nconst str = \"Here is some text\" +\r\n  \"that I want to break \" +\r\n  \"across multiple lines.\";\r\n```\r\n\r\nOr you can use a backslash (`\\`) at the end of the line:\r\n\r\n```ts\r\nconst str = \"Here is some text \\\r\n  that I want to break \\\r\n  across multiple lines.\";\r\n```\r\n"
       }
     ]
   },
@@ -39,7 +39,7 @@
     "codeText": "TS1005",
     "title": "'{0}' expected.",
     "category": "error",
-    "documentation": "Occurs when various syntax characters are making the code invalid.\n",
+    "documentation": "Occurs when various syntax characters are making the code invalid.\r\n",
     "tags": [
       "syntax-error",
       "incomplete-code"
@@ -50,11 +50,11 @@
     "fixes": [
       {
         "title": "'=' expected with type aliases",
-        "body": "Unlike interfaces, type aliases must have a left hand side and right hand side\nof a statement, so code like this is invalid syntax:\n\n```ts\ntype Person {\n  age: number;\n  name: string;\n}\n```\n\nInstead it should look like this:\n\n```ts\ntype Person = {\n  age: number;\n  name: string;\n};\n```\n"
+        "body": "Unlike interfaces, type aliases must have a left hand side and right hand side\r\nof a statement, so code like this is invalid syntax:\r\n\r\n```ts\r\ntype Person {\r\n  age: number;\r\n  name: string;\r\n}\r\n```\r\n\r\nInstead it should look like this:\r\n\r\n```ts\r\ntype Person = {\r\n  age: number;\r\n  name: string;\r\n};\r\n```\r\n"
       },
       {
         "title": "';' expected with arrow functions",
-        "body": "Code like this is trying to implicitly return an object with the map function,\nbut is actually invalid syntax:\n\n```ts\nconst items = [[\"a\", 1], [\"b\", 2]];\nconst mapped = items.map(([key, value]) => { [key]: value });\n```\n\nInstead, use parenthesis (`()`) around the return value:\n\n```ts\nconst items = [[\"a\", 1], [\"b\", 2]];\nconst mapped = items.map(([key, value]) => ({ [key]: value }));\n```\n"
+        "body": "Code like this is trying to implicitly return an object with the map function,\r\nbut is actually invalid syntax:\r\n\r\n```ts\r\nconst items = [[\"a\", 1], [\"b\", 2]];\r\nconst mapped = items.map(([key, value]) => { [key]: value });\r\n```\r\n\r\nInstead, use parenthesis (`()`) around the return value:\r\n\r\n```ts\r\nconst items = [[\"a\", 1], [\"b\", 2]];\r\nconst mapped = items.map(([key, value]) => ({ [key]: value }));\r\n```\r\n"
       }
     ]
   },
@@ -63,14 +63,14 @@
     "codeText": "TS1006",
     "title": "A file cannot have a reference to itself.",
     "category": "error",
-    "documentation": "When using\n[Triple-Slash Directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html),\nif a file references itself, this error will appear.\n\n**test.ts**\n\n```ts\n/// <reference path=\"./test.ts\" />\n```\n",
+    "documentation": "When using\r\n[Triple-Slash Directives](https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html),\r\nif a file references itself, this error will appear.\r\n\r\n**test.ts**\r\n\r\n```ts\r\n/// <reference path=\"./test.ts\" />\r\n```\r\n",
     "tags": [
       "triple-slash"
     ],
     "fixes": [
       {
         "title": "Remove the reference",
-        "body": "To fix the issue, just remove the reference. It is unnecessary as you can\nalready access everything in the file.\n"
+        "body": "To fix the issue, just remove the reference. It is unnecessary as you can\r\nalready access everything in the file.\r\n"
       }
     ]
   },
@@ -86,7 +86,7 @@
     "codeText": "TS1009",
     "title": "Trailing comma not allowed.",
     "category": "error",
-    "documentation": "If an inheritance clause (`extends` or `implements`) has a trailing comma, this\nerror is reported:\n\n```ts\ninterface A {}\n\nclass B implements A, {\n}\n```\n",
+    "documentation": "If an inheritance clause (`extends` or `implements`) has a trailing comma, this\r\nerror is reported:\r\n\r\n```ts\r\ninterface A {}\r\n\r\nclass B implements A, {\r\n}\r\n```\r\n",
     "tags": [
       "trailing-comma",
       "syntax-error"
@@ -94,7 +94,7 @@
     "fixes": [
       {
         "title": "Remove trailing comma",
-        "body": "Remove the trailing comma:\n\n```ts\ninterface A {}\n\nclass B implements A {\n}\n```\n"
+        "body": "Remove the trailing comma:\r\n\r\n```ts\r\ninterface A {}\r\n\r\nclass B implements A {\r\n}\r\n```\r\n"
       }
     ]
   },
@@ -103,7 +103,7 @@
     "codeText": "TS1010",
     "title": "'*/' expected.",
     "category": "error",
-    "documentation": "Occurs when a block comment is not properly terminated before the end of the\nfile is reached:\n\n```ts\n/**\n * Comment text\n *\nfunction test() {}\n```\n",
+    "documentation": "Occurs when a block comment is not properly terminated before the end of the\r\nfile is reached:\r\n\r\n```ts\r\n/**\r\n * Comment text\r\n *\r\nfunction test() {}\r\n```\r\n",
     "tags": [
       "syntax-error",
       "incomplete-code"
@@ -111,7 +111,7 @@
     "fixes": [
       {
         "title": "Terminate block comment",
-        "body": "Properly terminate the block comment:\n\n```ts\n/**\n * Comment text\n */\nfunction test() {}\n```\n"
+        "body": "Properly terminate the block comment:\r\n\r\n```ts\r\n/**\r\n * Comment text\r\n */\r\nfunction test() {}\r\n```\r\n"
       }
     ]
   },
@@ -120,7 +120,7 @@
     "codeText": "TS1011",
     "title": "An element access expression should take an argument.",
     "category": "error",
-    "documentation": "When accessing a property of an array or object with bracket notation, you will\nget this error if no property is supplied.\n\n```ts\nconst a = [1, 2, 3]\nconst b = a[]\n\n// or\nconst c = { d: 4 }\nconst d = c[]\n```\n",
+    "documentation": "When accessing a property of an array or object with bracket notation, you will\r\nget this error if no property is supplied.\r\n\r\n```ts\r\nconst a = [1, 2, 3]\r\nconst b = a[]\r\n\r\n// or\r\nconst c = { d: 4 }\r\nconst d = c[]\r\n```\r\n",
     "tags": [
       "syntax-error",
       "missing-code"
@@ -128,7 +128,7 @@
     "fixes": [
       {
         "title": "Provide an index argument",
-        "body": "To fix the error, provide an index or property:\n\n```ts\nconst a = [1, 2, 3];\nconst b = a[1];\n\n// or\nconst c = { d: 4 };\nconst d = c[\"d\"];\n```\n"
+        "body": "To fix the error, provide an index or property:\r\n\r\n```ts\r\nconst a = [1, 2, 3];\r\nconst b = a[1];\r\n\r\n// or\r\nconst c = { d: 4 };\r\nconst d = c[\"d\"];\r\n```\r\n"
       }
     ]
   },
@@ -144,7 +144,7 @@
     "codeText": "TS1013",
     "title": "A rest parameter or binding pattern may not have a trailing comma.",
     "category": "error",
-    "documentation": "If a function uses destructuring to consume the last argument in a function or\nhas a rest argument, the argument may not have a trailing comma.\n\n```ts\nfunction test(...args: any[]) {}\n```\n",
+    "documentation": "If a function uses destructuring to consume the last argument in a function or\r\nhas a rest argument, the argument may not have a trailing comma.\r\n\r\n```ts\r\nfunction test(...args: any[]) {}\r\n```\r\n",
     "tags": [
       "syntax-error",
       "tailing-comma"
@@ -155,7 +155,7 @@
     "fixes": [
       {
         "title": "Remove trailing comma",
-        "body": "To fix the error, remove the trailing comma:\n\n```ts\nfunction test(...args: any[]) {}\n```\n"
+        "body": "To fix the error, remove the trailing comma:\r\n\r\n```ts\r\nfunction test(...args: any[]) {}\r\n```\r\n"
       }
     ]
   },
@@ -164,7 +164,7 @@
     "codeText": "TS1014",
     "title": "A rest parameter must be last in a parameter list.",
     "category": "error",
-    "documentation": "It is not possible to have multiple rest parameters, or have rest parameters\nbefore regular parameters since they consume all other arguments.\n\n```ts\nfunction printf(...args: any[], format: string) {}\n// or\nfunction callMany<T extends any[]>(\n  ...functions: ((...args: T[]) => void)[],\n  ...args: T\n) {}\n```\n",
+    "documentation": "It is not possible to have multiple rest parameters, or have rest parameters\r\nbefore regular parameters since they consume all other arguments.\r\n\r\n```ts\r\nfunction printf(...args: any[], format: string) {}\r\n// or\r\nfunction callMany<T extends any[]>(\r\n  ...functions: ((...args: T[]) => void)[],\r\n  ...args: T\r\n) {}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
@@ -174,11 +174,11 @@
     "fixes": [
       {
         "title": "Move rest parameter to the end",
-        "body": "Consider moving the rest parameter to the end:\n\n```ts\nfunction printf(format: string, ...args: any[]) {}\n```\n"
+        "body": "Consider moving the rest parameter to the end:\r\n\r\n```ts\r\nfunction printf(format: string, ...args: any[]) {}\r\n```\r\n"
       },
       {
         "title": "Accept an array",
-        "body": "Consider accepting an array of arguments:\n\n```ts\nfunction printf(args: any[], format: string) {}\n\nfunction callMany<T extends any[]>(\n  functions: ((...args: T[]) => void)[],\n  ...args: T\n) {}\n```\n"
+        "body": "Consider accepting an array of arguments:\r\n\r\n```ts\r\nfunction printf(args: any[], format: string) {}\r\n\r\nfunction callMany<T extends any[]>(\r\n  functions: ((...args: T[]) => void)[],\r\n  ...args: T\r\n) {}\r\n```\r\n"
       }
     ]
   },
@@ -187,7 +187,7 @@
     "codeText": "TS1015",
     "title": "Parameter cannot have question mark and initializer.",
     "category": "error",
-    "documentation": "If a parameter is marked as optional with `?`, it means that passing `undefined`\nis acceptable. If a parameter is marked as optional by providing an initializer,\nit communicates to readers that if not provided (or set to `undefined`) the\ndefault will be used. It doesn't make sense to use both modifiers.\n\n```ts\nfunction test(a?: number = 0) {}\n```\n",
+    "documentation": "If a parameter is marked as optional with `?`, it means that passing `undefined`\r\nis acceptable. If a parameter is marked as optional by providing an initializer,\r\nit communicates to readers that if not provided (or set to `undefined`) the\r\ndefault will be used. It doesn't make sense to use both modifiers.\r\n\r\n```ts\r\nfunction test(a?: number = 0) {}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
@@ -197,7 +197,7 @@
     "fixes": [
       {
         "title": "Remove the question mark or the initializer",
-        "body": "Remove the question mark if the default better communicates your intent, or\nremove the initializer:\n\n```ts\nfunction test(a: number = 0) {}\n// or\nfunction test(a?: number) {}\n```\n"
+        "body": "Remove the question mark if the default better communicates your intent, or\r\nremove the initializer:\r\n\r\n```ts\r\nfunction test(a: number = 0) {}\r\n// or\r\nfunction test(a?: number) {}\r\n```\r\n"
       }
     ]
   },
@@ -206,7 +206,7 @@
     "codeText": "TS1016",
     "title": "A required parameter cannot follow an optional parameter.",
     "category": "error",
-    "documentation": "When a parameter is marked as optional with ? it indicates that callers can omit\nthe argument when calling the function. If another parameter is required after\nthe optional parameter, the ? would be effectively invalidated since users must\npass the argument in order to provide the later required argument.\n\n```ts\nfunction test(a?: number, b: number) {}\n```\n",
+    "documentation": "When a parameter is marked as optional with ? it indicates that callers can omit\r\nthe argument when calling the function. If another parameter is required after\r\nthe optional parameter, the ? would be effectively invalidated since users must\r\npass the argument in order to provide the later required argument.\r\n\r\n```ts\r\nfunction test(a?: number, b: number) {}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
@@ -216,11 +216,11 @@
     "fixes": [
       {
         "title": "Allow the argument to be undefined.",
-        "body": "Explicitly union the first argument with undefined and omit the question mark:\n\n```ts\nfunction test(a: number | undefined, b: number) {}\n```\n"
+        "body": "Explicitly union the first argument with undefined and omit the question mark:\r\n\r\n```ts\r\nfunction test(a: number | undefined, b: number) {}\r\n```\r\n"
       },
       {
         "title": "Re-order parameters",
-        "body": "Reorder the parameters so that required parameters appear before the optional ones:\n\n```ts\nfunction test(b: number, a?: number) {}\n```"
+        "body": "Reorder the parameters so that required parameters appear before the optional ones:\r\n\r\n```ts\r\nfunction test(b: number, a?: number) {}\r\n```"
       }
     ]
   },
@@ -229,14 +229,14 @@
     "codeText": "TS1017",
     "title": "An index signature cannot have a rest parameter.",
     "category": "error",
-    "documentation": "When writing an index signature, there must be exactly one parameter which is\nnot a rest parameter:\n\n```ts\ninterface A {\n  [...index: string]: boolean;\n}\n```\n",
+    "documentation": "When writing an index signature, there must be exactly one parameter which is\r\nnot a rest parameter:\r\n\r\n```ts\r\ninterface A {\r\n  [...index: string]: boolean;\r\n}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
     "fixes": [
       {
         "title": "Remove the ellipsis.",
-        "body": "To fix the error, just remove the ellipsis token (`...`):\n\n```ts\ninterface A {\n  [index: string]: boolean;\n}\n```\n\nIf you meant to state that the describes a function, use parenthesis rather than brackets:\n\n```ts\ninterface A {\n  (...args: string[]): boolean;\n}\n```"
+        "body": "To fix the error, just remove the ellipsis token (`...`):\r\n\r\n```ts\r\ninterface A {\r\n  [index: string]: boolean;\r\n}\r\n```\r\n\r\nIf you meant to state that the describes a function, use parenthesis rather than brackets:\r\n\r\n```ts\r\ninterface A {\r\n  (...args: string[]): boolean;\r\n}\r\n```"
       }
     ]
   },
@@ -245,14 +245,14 @@
     "codeText": "TS1018",
     "title": "An index signature parameter cannot have an accessibility modifier.",
     "category": "error",
-    "documentation": "Unlike regular function parameters, index signature parameters cannot have an\naccessibility modifier:\n\n```ts\ninterface A {\n  [private index: string]: boolean;\n}\n```\n",
+    "documentation": "Unlike regular function parameters, index signature parameters cannot have an\r\naccessibility modifier:\r\n\r\n```ts\r\ninterface A {\r\n  [private index: string]: boolean;\r\n}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
     "fixes": [
       {
         "title": "Remove accessability modifier.",
-        "body": "To fix the error, just remove the accessibility modifier:\n\n```ts\ninterface A {\n  [index: string]: boolean;\n}\n```\n"
+        "body": "To fix the error, just remove the accessibility modifier:\r\n\r\n```ts\r\ninterface A {\r\n  [index: string]: boolean;\r\n}\r\n```\r\n"
       }
     ]
   },
@@ -261,14 +261,14 @@
     "codeText": "TS1019",
     "title": "An index signature parameter cannot have a question mark.",
     "category": "error",
-    "documentation": "Unlike regular function parameters, index signature parameters cannot be marked\noptional. The parameter will always exist when determining the type:\n\n```ts\ninterface A {\n  [index?: string]: boolean;\n}\n```\n",
+    "documentation": "Unlike regular function parameters, index signature parameters cannot be marked\r\noptional. The parameter will always exist when determining the type:\r\n\r\n```ts\r\ninterface A {\r\n  [index?: string]: boolean;\r\n}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
     "fixes": [
       {
         "title": "Remove the question mark token.",
-        "body": "To fix the error, just remove the `?` token:\n\n```ts\ninterface A {\n  [index: string]: boolean;\n}\n```\n"
+        "body": "To fix the error, just remove the `?` token:\r\n\r\n```ts\r\ninterface A {\r\n  [index: string]: boolean;\r\n}\r\n```\r\n"
       }
     ]
   },
@@ -284,14 +284,14 @@
     "codeText": "TS1021",
     "title": "An index signature must have a type annotation.",
     "category": "error",
-    "documentation": "When defining an index signature, the signature must provide a type:\n\n```\ninterface A {\n  [a: string]\n}\n```\n",
+    "documentation": "When defining an index signature, the signature must provide a type:\r\n\r\n```\r\ninterface A {\r\n  [a: string]\r\n}\r\n```\r\n",
     "tags": [
       "syntax-error"
     ],
     "fixes": [
       {
         "title": "Provide a type.",
-        "body": "To fix the error, provide a type. All other properties on the object must be\nassignable to this type:\n\n```ts\ninterface A {\n  [a: string]: string;\n}\n```\n"
+        "body": "To fix the error, provide a type. All other properties on the object must be\r\nassignable to this type:\r\n\r\n```ts\r\ninterface A {\r\n  [a: string]: string;\r\n}\r\n```\r\n"
       }
     ]
   },
@@ -307,15 +307,15 @@
     "codeText": "TS1024",
     "title": "'readonly' modifier can only appear on a property declaration or index signature.",
     "category": "error",
-    "documentation": "It is not possible to mark all properties as `readonly` by marking the container\nas `readonly`:\n\n```ts\nreadonly class A {\n  static x = 1;\n}\nreadonly const a = { a: 1 };\n```\n\n## See also\n\n- [TypeScript 3.4 release announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4/)\n- [`as const` proposal](https://github.com/Microsoft/TypeScript/issues/26979)\n",
+    "documentation": "It is not possible to mark all properties as `readonly` by marking the container\r\nas `readonly`:\r\n\r\n```ts\r\nreadonly class A {\r\n  static x = 1;\r\n}\r\nreadonly const a = { a: 1 };\r\n```\r\n\r\n## See also\r\n\r\n- [TypeScript 3.4 release announcement](https://devblogs.microsoft.com/typescript/announcing-typescript-3-4/)\r\n- [`as const` proposal](https://github.com/Microsoft/TypeScript/issues/26979)\r\n",
     "fixes": [
       {
         "title": "Remove readonly keyword.",
-        "body": "To fix the error, move the `readonly` declaration into the object for classes:\n\n```ts\nclass A {\n  static readonly x = 1;\n}\n```\n"
+        "body": "To fix the error, move the `readonly` declaration into the object for classes:\r\n\r\n```ts\r\nclass A {\r\n  static readonly x = 1;\r\n}\r\n```\r\n"
       },
       {
         "title": "Use const keyword.",
-        "body": "For objects, you can use const assertions to deeply mark the object as read\nonly.\n\n```ts\nconst a = { a: 1 } as const;\n```\n"
+        "body": "For objects, you can use const assertions to deeply mark the object as read\r\nonly.\r\n\r\n```ts\r\nconst a = { a: 1 } as const;\r\n```\r\n"
       }
     ]
   },

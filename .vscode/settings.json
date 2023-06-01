@@ -1,8 +1,6 @@
 {
   "deno.enable": true,
   "deno.lint": true,
-  "cSpell.words": [
-    "algoliasearch",
-    "preact"
-  ]
+  "deno.unstable": true,
+  "editor.defaultFormatter": "denoland.vscode-deno"
 }

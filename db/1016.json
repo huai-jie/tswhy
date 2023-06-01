@@ -3,7 +3,7 @@
   "codeText": "TS1016",
   "title": "A required parameter cannot follow an optional parameter.",
   "category": "error",
-  "documentation": "When a parameter is marked as optional with ? it indicates that callers can omit\nthe argument when calling the function. If another parameter is required after\nthe optional parameter, the ? would be effectively invalidated since users must\npass the argument in order to provide the later required argument.\n\n```ts\nfunction test(a?: number, b: number) {}\n```\n",
+  "documentation": "When a parameter is marked as optional with ? it indicates that callers can omit\r\nthe argument when calling the function. If another parameter is required after\r\nthe optional parameter, the ? would be effectively invalidated since users must\r\npass the argument in order to provide the later required argument.\r\n\r\n```ts\r\nfunction test(a?: number, b: number) {}\r\n```\r\n",
   "tags": [
     "syntax-error"
   ],
@@ -13,11 +13,11 @@
   "fixes": [
     {
       "title": "Allow the argument to be undefined.",
-      "body": "Explicitly union the first argument with undefined and omit the question mark:\n\n```ts\nfunction test(a: number | undefined, b: number) {}\n```\n"
+      "body": "Explicitly union the first argument with undefined and omit the question mark:\r\n\r\n```ts\r\nfunction test(a: number | undefined, b: number) {}\r\n```\r\n"
     },
     {
       "title": "Re-order parameters",
-      "body": "Reorder the parameters so that required parameters appear before the optional ones:\n\n```ts\nfunction test(b: number, a?: number) {}\n```"
+      "body": "Reorder the parameters so that required parameters appear before the optional ones:\r\n\r\n```ts\r\nfunction test(b: number, a?: number) {}\r\n```"
     }
   ]
 }

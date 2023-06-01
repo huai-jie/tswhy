@@ -3,7 +3,7 @@
   "codeText": "TS1014",
   "title": "A rest parameter must be last in a parameter list.",
   "category": "error",
-  "documentation": "It is not possible to have multiple rest parameters, or have rest parameters\nbefore regular parameters since they consume all other arguments.\n\n```ts\nfunction printf(...args: any[], format: string) {}\n// or\nfunction callMany<T extends any[]>(\n  ...functions: ((...args: T[]) => void)[],\n  ...args: T\n) {}\n```\n",
+  "documentation": "It is not possible to have multiple rest parameters, or have rest parameters\r\nbefore regular parameters since they consume all other arguments.\r\n\r\n```ts\r\nfunction printf(...args: any[], format: string) {}\r\n// or\r\nfunction callMany<T extends any[]>(\r\n  ...functions: ((...args: T[]) => void)[],\r\n  ...args: T\r\n) {}\r\n```\r\n",
   "tags": [
     "syntax-error"
   ],
@@ -13,11 +13,11 @@
   "fixes": [
     {
       "title": "Move rest parameter to the end",
-      "body": "Consider moving the rest parameter to the end:\n\n```ts\nfunction printf(format: string, ...args: any[]) {}\n```\n"
+      "body": "Consider moving the rest parameter to the end:\r\n\r\n```ts\r\nfunction printf(format: string, ...args: any[]) {}\r\n```\r\n"
     },
     {
       "title": "Accept an array",
-      "body": "Consider accepting an array of arguments:\n\n```ts\nfunction printf(args: any[], format: string) {}\n\nfunction callMany<T extends any[]>(\n  functions: ((...args: T[]) => void)[],\n  ...args: T\n) {}\n```\n"
+      "body": "Consider accepting an array of arguments:\r\n\r\n```ts\r\nfunction printf(args: any[], format: string) {}\r\n\r\nfunction callMany<T extends any[]>(\r\n  functions: ((...args: T[]) => void)[],\r\n  ...args: T\r\n) {}\r\n```\r\n"
     }
   ]
 }

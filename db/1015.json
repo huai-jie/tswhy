@@ -3,7 +3,7 @@
   "codeText": "TS1015",
   "title": "Parameter cannot have question mark and initializer.",
   "category": "error",
-  "documentation": "If a parameter is marked as optional with `?`, it means that passing `undefined`\nis acceptable. If a parameter is marked as optional by providing an initializer,\nit communicates to readers that if not provided (or set to `undefined`) the\ndefault will be used. It doesn't make sense to use both modifiers.\n\n```ts\nfunction test(a?: number = 0) {}\n```\n",
+  "documentation": "If a parameter is marked as optional with `?`, it means that passing `undefined`\r\nis acceptable. If a parameter is marked as optional by providing an initializer,\r\nit communicates to readers that if not provided (or set to `undefined`) the\r\ndefault will be used. It doesn't make sense to use both modifiers.\r\n\r\n```ts\r\nfunction test(a?: number = 0) {}\r\n```\r\n",
   "tags": [
     "syntax-error"
   ],
@@ -13,7 +13,7 @@
   "fixes": [
     {
       "title": "Remove the question mark or the initializer",
-      "body": "Remove the question mark if the default better communicates your intent, or\nremove the initializer:\n\n```ts\nfunction test(a: number = 0) {}\n// or\nfunction test(a?: number) {}\n```\n"
+      "body": "Remove the question mark if the default better communicates your intent, or\r\nremove the initializer:\r\n\r\n```ts\r\nfunction test(a: number = 0) {}\r\n// or\r\nfunction test(a?: number) {}\r\n```\r\n"
     }
   ]
 }

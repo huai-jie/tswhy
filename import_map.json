@@ -23,9 +23,9 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
     "prism/": "https://esm.sh/stable/prismjs@1.29.0/",
     "std/encoding/front_matter/": "https://raw.githubusercontent.com/kitsonk/deno_std/fix_front_matter_extract/encoding/front_matter/",
-    "std/": "https://deno.land/std@0.178.0/",
-    "twind": "https://esm.sh/stable/twind@0.16.17",
-    "twind/": "https://esm.sh/stable/twind@0.16.17/",
+    "std/": "https://deno.land/std@0.190.0/",
+    "twind": "https://esm.sh/stable/twind@0.16.19",
+    "twind/": "https://esm.sh/stable/twind@0.16.19/",
     "$util/": "./util/",
 
     "https://esm.sh/v110/@octokit/plugin-retry@4.1.2/deno/plugin-retry.js": "https://esm.sh/v110/@octokit/plugin-retry@4.1.1/deno/plugin-retry.js"

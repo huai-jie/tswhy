@@ -3,7 +3,7 @@
   "codeText": "TS1010",
   "title": "'*/' expected.",
   "category": "error",
-  "documentation": "Occurs when a block comment is not properly terminated before the end of the\nfile is reached:\n\n```ts\n/**\n * Comment text\n *\nfunction test() {}\n```\n",
+  "documentation": "Occurs when a block comment is not properly terminated before the end of the\r\nfile is reached:\r\n\r\n```ts\r\n/**\r\n * Comment text\r\n *\r\nfunction test() {}\r\n```\r\n",
   "tags": [
     "syntax-error",
     "incomplete-code"
@@ -11,7 +11,7 @@
   "fixes": [
     {
       "title": "Terminate block comment",
-      "body": "Properly terminate the block comment:\n\n```ts\n/**\n * Comment text\n */\nfunction test() {}\n```\n"
+      "body": "Properly terminate the block comment:\r\n\r\n```ts\r\n/**\r\n * Comment text\r\n */\r\nfunction test() {}\r\n```\r\n"
     }
   ]
 }

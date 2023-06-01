@@ -3,7 +3,7 @@
   "codeText": "TS1011",
   "title": "An element access expression should take an argument.",
   "category": "error",
-  "documentation": "When accessing a property of an array or object with bracket notation, you will\nget this error if no property is supplied.\n\n```ts\nconst a = [1, 2, 3]\nconst b = a[]\n\n// or\nconst c = { d: 4 }\nconst d = c[]\n```\n",
+  "documentation": "When accessing a property of an array or object with bracket notation, you will\r\nget this error if no property is supplied.\r\n\r\n```ts\r\nconst a = [1, 2, 3]\r\nconst b = a[]\r\n\r\n// or\r\nconst c = { d: 4 }\r\nconst d = c[]\r\n```\r\n",
   "tags": [
     "syntax-error",
     "missing-code"
@@ -11,7 +11,7 @@
   "fixes": [
     {
       "title": "Provide an index argument",
-      "body": "To fix the error, provide an index or property:\n\n```ts\nconst a = [1, 2, 3];\nconst b = a[1];\n\n// or\nconst c = { d: 4 };\nconst d = c[\"d\"];\n```\n"
+      "body": "To fix the error, provide an index or property:\r\n\r\n```ts\r\nconst a = [1, 2, 3];\r\nconst b = a[1];\r\n\r\n// or\r\nconst c = { d: 4 };\r\nconst d = c[\"d\"];\r\n```\r\n"
     }
   ]
 }

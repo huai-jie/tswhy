@@ -3,7 +3,7 @@
   "codeText": "TS1002",
   "title": "Unterminated string literal.",
   "category": "error",
-  "documentation": "Occurs when there is an unterminated string literal somewhere. String literals\nmust be enclosed by single (`'`) or double (`\"`) quotes.\n\nOften, it caused by an attempt to use a string literal over multiple lines:\n\n```ts\nconst str = \"Here is some text\n  that I want to break\n  across multiple lines.\";\n```\n",
+  "documentation": "Occurs when there is an unterminated string literal somewhere. String literals\r\nmust be enclosed by single (`'`) or double (`\"`) quotes.\r\n\r\nOften, it caused by an attempt to use a string literal over multiple lines:\r\n\r\n```ts\r\nconst str = \"Here is some text\r\n  that I want to break\r\n  across multiple lines.\";\r\n```\r\n",
   "tags": [
     "syntax-error",
     "incomplete-code",
@@ -15,7 +15,7 @@
   "fixes": [
     {
       "title": "Multiple Lines",
-      "body": "If you are trying to break a string across multiple lines, you can use template\nliterals using the backtick (`` ` ``) instead:\n\n```ts\nconst str = `Here is some text\n  that I want to break\n  across multiple lines.`;\n```\n\nOr you can use string concatenation:\n\n```ts\nconst str = \"Here is some text\" +\n  \"that I want to break \" +\n  \"across multiple lines.\";\n```\n\nOr you can use a backslash (`\\`) at the end of the line:\n\n```ts\nconst str = \"Here is some text \\\n  that I want to break \\\n  across multiple lines.\";\n```\n"
+      "body": "If you are trying to break a string across multiple lines, you can use template\r\nliterals using the backtick (`` ` ``) instead:\r\n\r\n```ts\r\nconst str = `Here is some text\r\n  that I want to break\r\n  across multiple lines.`;\r\n```\r\n\r\nOr you can use string concatenation:\r\n\r\n```ts\r\nconst str = \"Here is some text\" +\r\n  \"that I want to break \" +\r\n  \"across multiple lines.\";\r\n```\r\n\r\nOr you can use a backslash (`\\`) at the end of the line:\r\n\r\n```ts\r\nconst str = \"Here is some text \\\r\n  that I want to break \\\r\n  across multiple lines.\";\r\n```\r\n"
     }
   ]
 }

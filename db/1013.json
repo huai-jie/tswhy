@@ -3,7 +3,7 @@
   "codeText": "TS1013",
   "title": "A rest parameter or binding pattern may not have a trailing comma.",
   "category": "error",
-  "documentation": "If a function uses destructuring to consume the last argument in a function or\nhas a rest argument, the argument may not have a trailing comma.\n\n```ts\nfunction test(...args: any[]) {}\n```\n",
+  "documentation": "If a function uses destructuring to consume the last argument in a function or\r\nhas a rest argument, the argument may not have a trailing comma.\r\n\r\n```ts\r\nfunction test(...args: any[]) {}\r\n```\r\n",
   "tags": [
     "syntax-error",
     "tailing-comma"
@@ -14,7 +14,7 @@
   "fixes": [
     {
       "title": "Remove trailing comma",
-      "body": "To fix the error, remove the trailing comma:\n\n```ts\nfunction test(...args: any[]) {}\n```\n"
+      "body": "To fix the error, remove the trailing comma:\r\n\r\n```ts\r\nfunction test(...args: any[]) {}\r\n```\r\n"
     }
   ]
 }

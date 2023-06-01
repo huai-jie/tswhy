@@ -3,7 +3,7 @@
   "codeText": "TS1009",
   "title": "Trailing comma not allowed.",
   "category": "error",
-  "documentation": "If an inheritance clause (`extends` or `implements`) has a trailing comma, this\nerror is reported:\n\n```ts\ninterface A {}\n\nclass B implements A, {\n}\n```\n",
+  "documentation": "If an inheritance clause (`extends` or `implements`) has a trailing comma, this\r\nerror is reported:\r\n\r\n```ts\r\ninterface A {}\r\n\r\nclass B implements A, {\r\n}\r\n```\r\n",
   "tags": [
     "trailing-comma",
     "syntax-error"
@@ -11,7 +11,7 @@
   "fixes": [
     {
       "title": "Remove trailing comma",
-      "body": "Remove the trailing comma:\n\n```ts\ninterface A {}\n\nclass B implements A {\n}\n```\n"
+      "body": "Remove the trailing comma:\r\n\r\n```ts\r\ninterface A {}\r\n\r\nclass B implements A {\r\n}\r\n```\r\n"
     }
   ]
 }
